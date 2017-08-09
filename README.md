@@ -38,18 +38,18 @@ component = DaggerDemoComponent.builder()
 **GreetingActivity.java** declares the depency with the *@Inject* 
 annotation
 ```
-    /**
-     * The SharedPReferences injected by Dagger 2
-     */
-    @Inject
-    SharedPreferences preferences;
+/**
+* The SharedPReferences injected by Dagger 2
+*/
+@Inject
+SharedPreferences preferences;
 ```
 and then calls the appropriate inject method in **DemoComponent.java**
 in the onCreate method
 ```
-	/**
-         * The Dagger 2 injection happens here
-         */
-        ((DemoApplication) getApplication()).component.inject(this);
+/**
+ * The Dagger 2 injection happens here
+ */
+((DemoApplication) getApplication()).component.inject(this);
 ```
 
