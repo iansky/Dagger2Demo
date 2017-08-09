@@ -20,7 +20,7 @@ provided 'javax.annotation:jsr250-api:1.0'
 dependenices are defined by the Objects they return. The class is annotated 
 with *@Module*
 
-**DemoComponent.java* is an interface that links the module dependencies to 
+**DemoComponent.java** is an interface that links the module dependencies to 
 the activities
 
 **DemoApplication.java** extends the android.app.Application and creates
