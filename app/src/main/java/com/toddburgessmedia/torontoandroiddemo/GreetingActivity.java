@@ -40,7 +40,7 @@ public class GreetingActivity extends AppCompatActivity {
         /**
          * The Dagger 2 injection happens here
          */
-        ((DemoApplication) getApplication()).component.inject(this);
+        ((DemoApplication) getApplication()).getComponent().inject(this);
 
         setContentView(R.layout.activity_greeting);
 

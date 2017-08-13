@@ -34,7 +34,7 @@ public class LoveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_love);
 
-        ((DemoApplication) getApplication()).component.inject(this);
+        ((DemoApplication) getApplication()).getComponent().inject(this);
 
         greeting = (TextView) findViewById(R.id.love_greeting);
     }
