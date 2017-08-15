@@ -11,8 +11,8 @@ provided by Dagger 2.
 
 Dagger 2 dependencies added in build.gradle
 ```
-compile 'com.google.dagger:dagger:2.9'
-annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
+compile 'com.google.dagger:dagger:2.11'
+annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
 provided 'javax.annotation:jsr250-api:1.0'
 ```
 
