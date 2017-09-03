@@ -45,6 +45,7 @@ public class GreetingActivityTest {
         when(prefs.getString(anyString(), anyString())).thenReturn("Testing");
         when(prefs.edit()).thenReturn(editor);
 
+
         activity.preferences = prefs;
         controller.start();
     }
