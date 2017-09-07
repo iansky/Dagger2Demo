@@ -8,6 +8,8 @@ import android.widget.EditText;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.android.controller.ActivityController;
@@ -17,7 +19,6 @@ import org.robolectric.shadows.ShadowIntent;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.robolectric.Shadows.shadowOf;
 
@@ -31,7 +32,11 @@ import static org.robolectric.Shadows.shadowOf;
 public class GreetingActivityTest {
 
     GreetingActivity activity;
+
+    @Mock
     SharedPreferences prefs;
+
+    @Mock
     SharedPreferences.Editor editor;
 
     @Before
@@ -40,8 +45,7 @@ public class GreetingActivityTest {
         ActivityController controller = Robolectric.buildActivity(GreetingActivity.class).create();
         activity = (GreetingActivity) controller.get();
 
-        prefs = mock(SharedPreferences.class);
-        editor = mock(SharedPreferences.Editor.class);
+        MockitoAnnotations.initMocks(this);
         when(prefs.getString(anyString(), anyString())).thenReturn("Testing");
         when(prefs.edit()).thenReturn(editor);
 
