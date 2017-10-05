@@ -58,7 +58,7 @@ public class AppModule {
     @Singleton
     public SharedPreferences getSharedPreferences(Application app) {
 
-        return app.getSharedPreferences("example", Context.MODE_PRIVATE);
+        return
     }
 
     /**
@@ -74,4 +74,6 @@ public class AppModule {
 
         return app.getSharedPreferences("release", Context.MODE_PRIVATE);
     }
+
+    @
 }

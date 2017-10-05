@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
 
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.toddburgessmedia.torontoandroiddemo"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -23,6 +23,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        live {
+            applicationIdSuffix ".live"
+            versionNameSuffix "-live"
+        }
+        mock {
+            applicationIdSuffix ".mock"
+            versionNameSuffix "-mock"
+        }
+    }
 }
 
 dependencies {
@@ -31,7 +41,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
@@ -41,10 +51,10 @@ dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
 
     testCompile "org.robolectric:robolectric:3.4.2"
-    testCompile "org.mockito:mockito-core:2.+"
+    testCompile "org.mockito:mockito-core:2.10.0"
 
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'com.android.support:appcompat-v7:25.3.1'
+    androidTestCompile 'com.android.support:appcompat-v7:26.1.0'
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
 
 
